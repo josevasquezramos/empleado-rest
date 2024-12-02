@@ -1,0 +1,47 @@
+<div class="card" style="width: 100%; max-width: 600px; margin: 20px auto;">
+    <div class="card-header">
+        <h3 class="mb-0">Crear Empleado</h3>
+    </div>
+    <div class="card-body">
+        <div [hidden]="enviado">
+            <form (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombres:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required
+                        [(ngModel)]="empleado.nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellidos:</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" required
+                        [(ngModel)]="empleado.apellido">
+                </div>
+                <div class="mb-3">
+                    <label for="dni" class="form-label">DNI:</label>
+                    <input type="text" class="form-control" id="dni" name="dni" required [(ngModel)]="empleado.dni">
+                </div>
+                <div class="mb-3">
+                    <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento:</label>
+                    <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required
+                        [(ngModel)]="empleado.fechaNacimiento">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">eMail:</label>
+                    <input type="email" class="form-control" id="email" name="email" required
+                        [(ngModel)]="empleado.email">
+                </div>
+                <div class="mb-3">
+                    <label for="fechaIngreso" class="form-label">Fecha de Ingreso:</label>
+                    <input type="date" class="form-control" id="fechaIngreso" name="fechaIngreso" required
+                        [(ngModel)]="empleado.fechaIngreso">
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-success">Crear</button>
+                    <button (click)="verListado()" type="button" class="btn btn-secondary">Cancelar</button>
+                </div>
+            </form>
+        </div>
+        <div [hidden]="!enviado">
+            <h4 class="text-success text-center">¡Usted envió satisfactoriamente!</h4>
+        </div>
+    </div>
+</div>

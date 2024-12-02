@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'empleado-rest';
+  title = 'Cliente REST: Empleado - Angular 11';
 }

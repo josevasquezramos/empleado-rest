@@ -1,0 +1,18 @@
+<div *ngIf="empleado" class="card shadow-sm" style="width: 100%; max-width: 600px; margin: 20px auto;">
+    <div class="card-header text-center">
+        <h3 class="mb-0">Detalle de Empleado</h3>
+    </div>
+    <div class="card-body">
+        <div><label class="form-label"><b>Nombre:</b></label> {{ empleado.nombre }}</div>
+        <div><label class="form-label"><b>Apellido:</b></label> {{ empleado.apellido }}</div>
+        <div><label class="form-label"><b>DNI:</b></label> {{ empleado.dni }}</div>
+        <div><label class="form-label"><b>Fecha de Nacimiento:</b></label> {{ empleado.fechaNacimiento |
+            date: 'dd/MM/yyyy' }}</div>
+        <div><label class="form-label"><b>Email:</b></label> {{ empleado.email }}</div>
+        <div><label class="form-label"><b>Fecha de Ingreso:</b></label> {{ empleado.fechaIngreso | date:
+            'dd/MM/yyyy' }}</div>
+    </div>
+    <div class="card-footer text-end">
+        <button (click)="verListado()" class="btn btn-primary">Regresar a la lista de Empleados</button>
+    </div>
+</div>
